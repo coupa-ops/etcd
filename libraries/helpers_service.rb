@@ -45,6 +45,7 @@ module EtcdCookbook
         opts << "-peer-trusted-ca-file=#{new_resource.peer_trusted_ca_file}" unless new_resource.peer_trusted_ca_file.nil?
         opts << "-auto-tls=#{new_resource.auto_tls}"
         opts << "-peer-auto-tls=#{new_resource.peer_auto_tls}"
+        opts << "-cipher-suites=#{new_resource.cipher_suites}" unless new_resource.cipher_suites.nil?
         opts << "-proxy-dial-timeout=#{new_resource.proxy_dial_timeout}" unless new_resource.proxy_dial_timeout.nil?
         opts << "-proxy-failure-wait=#{new_resource.proxy_failure_wait}" unless new_resource.proxy_failure_wait.nil?
         opts << "-proxy-read-timeout=#{new_resource.proxy_read_timeout}" unless new_resource.proxy_read_timeout.nil?
