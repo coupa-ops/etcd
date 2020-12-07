@@ -6,7 +6,7 @@ description 'Installs and configures etcd'
 long_description IO.read(File.join(File.dirname(__FILE__), 'README.md'))
 version '5.6.0'
 
-depends 'docker'
+depends 'docker', '~> 7.2.2'
 
 %w(ubuntu debian redhat centos suse opensuse opensuseleap scientific oracle amazon).each do |os|
   supports os
